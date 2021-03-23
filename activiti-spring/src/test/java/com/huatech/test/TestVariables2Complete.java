@@ -69,7 +69,7 @@ public class TestVariables2Complete {
         System.out.println(processInstance.getId());
     }
 
-    /**
+    /**2
      * 完成个人任务
      */
     @Test
