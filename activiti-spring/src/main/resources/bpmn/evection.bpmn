@@ -4,7 +4,11 @@
     <startEvent id="_11" name="StartEvent"/>
     <userTask activiti:assignee="jl" activiti:exclusive="true" camunda:assignee="jl" id="_12" name="经理审批"/>
     <userTask activiti:assignee="zjl" activiti:exclusive="true" camunda:assignee="zj" id="_13" name="总经理审批"/>
-    <userTask activiti:assignee="zhangsan" activiti:exclusive="true" camunda:assignee="zs" id="_14" name="创建出差申请"/>
+    <userTask activiti:assignee="zhangsan" activiti:exclusive="true" camunda:assignee="zs" id="_14" name="创建出差申请">
+      <extensionElements>
+        <activiti:taskListener event="create"/>
+      </extensionElements>
+    </userTask>
     <endEvent id="_15" name="EndEvent"/>
     <sequenceFlow id="_16" sourceRef="_11" targetRef="_14"/>
     <sequenceFlow id="_17" sourceRef="_14" targetRef="_12"/>
